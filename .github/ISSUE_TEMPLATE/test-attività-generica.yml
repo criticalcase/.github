@@ -21,7 +21,7 @@ body:
       required: true
   
   - type: dropdown
-    id: priorità
+    id: priorita
     attributes:
       label: Priorità
       description: Assegna una priorità a questa attività.
