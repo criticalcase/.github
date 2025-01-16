@@ -1,12 +1,3 @@
----
-name: test attività generica
-about: Describe this issue template's purpose here.
-title: ''
-labels: ''
-assignees: ''
-
----
-
 name: Attività Generica
 description: Traccia un'attività generale da svolgere nel competence center
 title: "[Task] Titolo attività"
