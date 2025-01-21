@@ -56,8 +56,8 @@ body:
     attributes:
       label: Is this a cross-competence-center task?
       options:
-        - label: yes
-        - label: no
+        - label: "Yes"
+        - label: "No"
 
   - type: textarea
     id: cross-competence-center-issue
