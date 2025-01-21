@@ -1,0 +1,69 @@
+name: Competence Center Customer Request
+description: Track a R&D activity based on a customer request
+title: "[CR] Task title"
+labels: ["competence-center-customer-request"]
+
+body:
+
+  - type: input
+    id: customer
+    attributes:
+      label: Customer
+      description: Which customer requested this activity?
+      placeholder: Customer name
+    validations:
+      required: true
+
+  - type: input
+    id: ticket
+    attributes:
+      label: Ticket
+      description: What is the ticket number if present?
+      placeholder: ITO-123
+
+  - type: textarea
+    id: request
+    attributes:
+      label: Task request
+      description: Provide a detailed description of the request from the customer.
+      placeholder: This task is about...
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: Approach
+      description: Provide a detailed description of the approach to be taken.
+      placeholder: The idea is to test the required tool...
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: Priority
+    attributes:
+      label: Priority
+      description: Assign a priority to this task.
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: cross-competence-center
+    attributes:
+      label: Is this a cross-competence-center task?
+      options:
+        - label: yes
+        - label: no
+
+  - type: textarea
+    id: cross-competence-center-issue
+    attributes:
+      label: List of issues in other competence centers
+      description: If it is a cross-competence-center task, list the issues in other competence centers.
+      placeholder: |
+        - Issue 1
+        - Issue 2
