@@ -1,0 +1,53 @@
+name: Competence Center Improvement
+description: Track an activity about a new tool or a new feature
+title: "[Imp] Task title"
+labels: ["competence-center-improvement"]
+
+body:
+
+  - type: textarea
+    id: need
+    attributes:
+      label: Need
+      description: Provide a detailed description of the reason why the new tool or the new feature is required
+      placeholder: This task is about...
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: Approach
+      description: Provide a detailed description of the approach to be taken.
+      placeholder: The idea is to test the required tool...
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: Priority
+    attributes:
+      label: Priority
+      description: Assign a priority to this task.
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: cross-competence-center
+    attributes:
+      label: Is this a cross-competence-center task?
+      options:
+        - label: "Yes"
+        - label: "No"
+
+  - type: textarea
+    id: cross-competence-center-issue
+    attributes:
+      label: List of issues in other competence centers
+      description: If it is a cross-competence-center task, list the issues in other competence centers.
+      placeholder: |
+        - Issue 1
+        - Issue 2
