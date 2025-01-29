@@ -1,0 +1,62 @@
+name: Competence Center Tool Update
+description: Track an activity that requires to update an internal tool
+title: "[TU] Task title"
+labels: ["competence-center-tool-update"]
+
+body:
+
+  - type: input
+    id: tool
+    attributes:
+      label: Tool
+      description: Which tool requires to be updated?
+      placeholder: Tool name
+    validations:
+      required: true
+
+  - type: textarea
+    id: breaking-changes
+    attributes:
+      label: Breaking Changes
+      description: Provide a detailed description of the breaking changes of the new version
+      placeholder: no breaking changes || Pay attention to the following breaking changes...
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: Approach
+      description: Provide a detailed description of the approach to be taken.
+      placeholder: The version value in the helm chart will be changed...
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: Priority
+    attributes:
+      label: Priority
+      description: Assign a priority to this task.
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: cross-competence-center
+    attributes:
+      label: Is this a cross-competence-center task?
+      options:
+        - label: "Yes"
+        - label: "No"
+
+  - type: textarea
+    id: cross-competence-center-issue
+    attributes:
+      label: List of issues in other competence centers
+      description: If it is a cross-competence-center task, list the issues in other competence centers.
+      placeholder: |
+        - Issue 1
+        - Issue 2
